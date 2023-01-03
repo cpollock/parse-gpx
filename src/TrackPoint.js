@@ -1,13 +1,14 @@
 const haversine = require('haversine-distance');
 
 class TrackPoint {
-    constructor(el, lat, lng, time, heartrate, cadence) {
+    constructor(el, lat, lng, time, heartrate, cadence, power) {
         this.elevation = el ? parseFloat(el) : undefined;
         this.latitude = lat;
         this.longitude = lng;
         this.timestamp = time;
         this.heartrate = heartrate ? parseInt(heartrate) : undefined;
         this.cadence = cadence ? parseInt(cadence) : undefined;
+        this.power = power ? parseInt(power) : undefined;
     }
 
     /**

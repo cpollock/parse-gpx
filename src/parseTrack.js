@@ -32,14 +32,18 @@ const parseTrack = track =>  {
             hr = extension;
           }
 
-          if(k.indexOf('cadence') > -1) {
+          if(k.indexOf('power') > -1) {
+            power = extension;
+          }
+
+          if(k.indexOf('cadence') > -1 || k.indexOf('cad') > -1) {
             cadence = extension;
           }
       }
     }
   }
 
-    return new TrackPoint(elevation, lat, lng, timestamp, hr, cadence);
+    return new TrackPoint(elevation, lat, lng, timestamp, hr, cadence, power);
   });
 
   return new Track(trackPoints);
