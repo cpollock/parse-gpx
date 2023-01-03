@@ -9,7 +9,8 @@ const parseTrack = track =>  {
     lng = (t['$'].lng || t['$'].lon),
     timestamp = t.time[0],
     hr,
-    cadence;
+    cadence,
+    power;
 
   if(t.extensions) {
     var extensions = t.extensions[0];
